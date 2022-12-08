@@ -1,0 +1,7 @@
+select EMP_ID, F_NAME, L_NAME, JOB_TITLE, START_DATE
+from employees e, jobs j, job_history jh 
+where e.JOB_ID = j.JOB_IDENT
+AND j.JOB_IDENT = jh.JOBS_ID 
+AND e.SEX = 'M'
+AND e.SALARY > 40000
+ORDER BY jh.START_DATE DESC 
